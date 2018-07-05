@@ -1,0 +1,53 @@
+﻿body {
+    font-size:14px
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+}
+
+    table h2 {
+        text-align: left;
+    }
+
+    table td, table th {
+        border: 1px solid #cad9ea;
+        color: #666;
+        height: 30px;
+        text-align: left;
+        padding: 5px;
+    }
+
+    table .td1 {
+        width:30%;
+    }
+
+    table .td2 {
+        width: 70%;
+    }
+
+    table thead th {
+        background-color: #CCE8EB;
+        width: 100px;
+    }
+
+    table tr:nth-child(odd) {
+        /*chm 不支持 odd*/
+        background: #fff;
+    }
+
+    table tr:nth-child(even) {
+        /*chm 不支持 even*/
+        background: #F5FAFA;
+    }
+
+    table .tr0 {
+        background: #fff;
+    }
+
+    table .tr1 {
+        background: #F5FAFA;
+    }

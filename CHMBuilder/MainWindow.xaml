@@ -1,0 +1,40 @@
+﻿<Window x:Class="CHMBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CHMBuilder" 
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="CHM Builder" Height="200" Width="400">
+    
+    <Grid Background="Transparent" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="chm 标题：" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" />
+        <Label Grid.Row="1" Grid.Column="0" Content="html 目录：" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" />
+
+        <TextBox Name="txtChmTitle" Grid.Row="0" Grid.Column="1" Height="30" VerticalContentAlignment="Center">
+            <TextBox.ToolTip>
+                <TextBlock>生成的 chm 文件的标题</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+        <TextBox Name="txtHtmlDirectory" Grid.Row="1" Grid.Column="1" Height="30" VerticalContentAlignment="Center" GotFocus="txtHtmlDirectory_GotFocus">
+            <TextBox.ToolTip>
+                <TextBlock>需要生成 chm 文件的 html 文件的根目录</TextBlock>
+            </TextBox.ToolTip>
+        </TextBox>
+
+        <Button Name="btnBuildChm" Content="生成 chm 文件" Grid.Row="2" Grid.ColumnSpan="3" Margin="20 5" Click="btnBuildChm_Click" />
+        
+    </Grid>
+</Window>
